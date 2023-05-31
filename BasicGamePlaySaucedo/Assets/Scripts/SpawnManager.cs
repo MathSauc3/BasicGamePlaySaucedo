@@ -37,8 +37,8 @@ public class SpawnManager : MonoBehaviour
     void SpawnLeftAnimal()
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);
-        Vector3 spawnpos = new Vector3(sideSpawnX, 0, Random.Range(sideSpawnMinZ, sideSpawnMaxZ));
-        Vector3 rotation = new Vector3(0, 90, 0);
+        Vector3 spawnpos = new Vector3(-sideSpawnX, 0, Random.Range(sideSpawnMinZ, sideSpawnMaxZ));
+        Vector3 rotation = new Vector3(0, -90, 0);
         Instantiate(animalPrefabs[animalIndex], spawnpos, Quaternion.Euler(rotation));
     }
     void SpawnRightAnimal()
